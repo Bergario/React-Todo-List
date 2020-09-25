@@ -1,4 +1,139 @@
-.App {
-  font-family: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Homemade+Apple&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-red-color: #e06262;
+}
+
+.main-red-color {
+  color: var(--main-red-color);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #a4c1b7;
+  height: 100vh;
+}
+
+body,
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 500px;
+  height: 800px;
+  background-color: #d6ece3;
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.frame {
+  border: 2px solid#9aefd9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-tittle {
+  flex: 1;
   text-align: center;
+  font-size: 3.6rem;
+  font-family: "homemade apple", sans-serif;
+  text-transform: lowercase;
+}
+
+.header-btn {
+  font-size: 1.8rem;
+  font-family: "bungee", sans-serif;
+  padding: 16px;
+  padding-top: 0;
+  background-color: unset;
+  outline: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+.header-btn:active {
+  text-shadow: 1px 1px 2px black;
+}
+
+.header-btn.main-red-color:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.add {
+  padding: 16px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+  flex: 1;
+  border-bottom: 1px solid var(--main-red-color);
+  outline: unset;
+  font-family: "homemade apple", sans-serif;
+  font-size: 1.6rem;
+  text-transform: lowercase;
+}
+
+.add-btn {
+  font-size: 1.8rem;
+  font-family: "bungee", sans-serif;
+  padding: 16px;
+  padding-right: unset;
+  cursor: pointer;
+  outline: unset;
+  border: unset;
+  background: unset;
+}
+
+.add-btn:active {
+  text-shadow: 1px 1px 2px black;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+  flex: 1 0 auto;
+  text-align: center;
+  min-height: 34px;
+  margin: 0 0 16px;
+  font-family: "homemade apple", sans-serif;
+  font-size: 2.4rem;
+  border-bottom: 1px solid var(--main-red-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
