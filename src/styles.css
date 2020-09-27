@@ -46,6 +46,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .header {
@@ -119,11 +120,13 @@ html {
 .todos {
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  min-height: 500px;
 }
 
 .todo {
   position: relative;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
   text-align: center;
   min-height: 34px;
   margin: 0 0 16px;
@@ -133,6 +136,7 @@ html {
 }
 
 .todo-text {
+  height: 100%;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
