@@ -12,11 +12,17 @@ const TodoList = () => {
     { text: "menggambar" },
     { text: "berkebun" }
   ]);
+
+  const addTodo = (value) => {
+    const addTextTodo = [...todos, { text: value }];
+
+    setTodos(addTextTodo);
+  };
   return (
     <Paper>
       <Header />
 
-      <TodoFrom />
+      <TodoFrom addTodo={addTodo} />
 
       <Todos todos={todos} />
     </Paper>
