@@ -18,11 +18,15 @@ const TodoList = () => {
 
     setTodos(addTextTodo);
   };
+
+  const [showAdd, setShowAdd] = useState(false);
+  const showAddToggle = () => setShowAdd(!showAdd);
+
   return (
     <Paper>
-      <Header />
+      <Header showAddToggle={showAddToggle} />
 
-      <TodoFrom addTodo={addTodo} />
+      <TodoFrom addTodo={addTodo} showAdd={showAdd} />
 
       <Todos todos={todos} />
     </Paper>
