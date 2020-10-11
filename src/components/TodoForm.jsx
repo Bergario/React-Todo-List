@@ -9,6 +9,11 @@ const TodoForm = ({ addTodo, showAdd }) => {
       alert("Todo List is Required!");
       return;
     }
+    if (value.length > 20) {
+      alert("Please shorter text todo!");
+      setValue("");
+      return;
+    }
     e.preventDefault();
     addTodo(value);
     setValue("");
