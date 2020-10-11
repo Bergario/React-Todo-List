@@ -6,15 +6,22 @@ import Todos from "../components/Todos";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
-    { text: "belajar" },
-    { text: "memancing" },
-    { text: "menyapu" },
-    { text: "menggambar" },
-    { text: "berkebun" }
+    { text: "belajar", isCompleted: false },
+    { text: "memancing", isCompleted: false },
+    { text: "menyapu", isCompleted: false },
+    { text: "menggambar", isCompleted: false },
+    { text: "berkebun", isCompleted: false }
   ]);
 
   const addTodo = (value) => {
-    const addTextTodo = [...todos, { text: value }];
+    const addTextTodo = [...todos, { text: value, isCompleted: false }];
+
+    setTodos(addTextTodo);
+  };
+
+  const completedTodo = (index) => {
+    const addTextTodo = [...todos];
+    addTextTodo[index].isCompleted = !addTextTodo[index].isCompleted;
 
     setTodos(addTextTodo);
   };
@@ -28,7 +35,7 @@ const TodoList = () => {
 
       <TodoFrom addTodo={addTodo} showAdd={showAdd} />
 
-      <Todos todos={todos} />
+      <Todos todos={todos} completedTodo={completedTodo} />
     </Paper>
   );
 };
